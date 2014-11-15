@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -19,7 +19,16 @@
         </activity>
         <activity
             android:name="com.belatrixsf.paganomas.paganomasapp.Login"
-            android:label="@string/title_activity_login" >
+            android:label="@string/title_activity_login"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.belatrixsf.paganomas.paganomasapp.TeDeben"
+            android:label="@string/title_activity_te_deben" >
+        </activity>
+        <activity
+            android:name="com.belatrixsf.paganomas.paganomasapp.TeDebenNormal"
+            android:label="@string/title_activity_te_deben_normal" >
         </activity>
     </application>
 

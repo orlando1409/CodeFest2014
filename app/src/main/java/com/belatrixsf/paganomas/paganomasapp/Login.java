@@ -1,17 +1,26 @@
 package com.belatrixsf.paganomas.paganomasapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
-public class Login extends Activity {
+public class Login extends Activity  implements View.OnClickListener{
+
+    Button btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        btnLogin = (Button)findViewById(R.id.btnLogin);
+        btnLogin.setOnClickListener(this);
+
     }
 
 
@@ -35,5 +44,14 @@ public class Login extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(view.getId() == R.id.btnLogin)
+        {
+            Intent intent = new Intent(this, TeDebenNormal.class);
+            startActivity(intent);
+        }
     }
 }
